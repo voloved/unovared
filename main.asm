@@ -905,7 +905,6 @@ INCLUDE "data/cries.asm"
 INCLUDE "engine/battle/unused_stats_functions.asm"
 INCLUDE "engine/battle/scroll_draw_trainer_pic.asm"
 INCLUDE "engine/battle/trainer_ai.asm"
-INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
 
 TradingAnimationGraphics:
 	INCBIN "gfx/game_boy.norepeat.2bpp"
@@ -1888,8 +1887,6 @@ Plateau_Block:     INCBIN "gfx/blocksets/plateau.bst"
 
 SECTION "bank1A",ROMX,BANK[$1A]
 
-INCLUDE "engine/battle/decrement_pp.asm"
-
 Version_GFX:
 IF DEF(_RED)
 	INCBIN "gfx/red/redgreenversion.1bpp" ; 10 tiles
@@ -2088,6 +2085,8 @@ AgathaBlocks: INCBIN "maps/agatha.blk"
 INCLUDE "engine/menu/league_pc.asm"
 
 INCLUDE "engine/overworld/hidden_items.asm"
+INCLUDE "engine/battle/decrement_pp.asm"
+INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
 
 INCLUDE "engine/steal_mon.asm"
 
